@@ -14,12 +14,12 @@
                     if($queryDelete){
                         echo
                             '<script>
-                            alert("Delete Success"); window.location = "../page/dashboardPage.php"
+                            alert("Delete Success!!"); window.location = "../page/dashboardPage.php"
                             </script>';
                     }else{
                         echo
                             '<script>
-                            alert("Delete Failed"); window.location = "../page/dashboardPage.php"
+                            alert("Delete Failed [!]"); window.location = "../page/dashboardPage.php"
                             </script>';
                     }
                 }else{

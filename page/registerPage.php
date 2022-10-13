@@ -41,9 +41,11 @@
                                 <input class="form-control" id="email"
                                 name="email" aria-describedby="emailHelp">
                             </div>
+                            <div class="form-group col-md-6">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Profile Picture</label>
                                 <input type="file" name="my_image">
+                            </div>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-

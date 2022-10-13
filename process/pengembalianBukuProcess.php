@@ -29,14 +29,14 @@
         if($query){
             echo
                 '<script>
-                alert("data berhasil diubah");
+                alert("Data berhasil diubah!!");
                 window.location = "../page/listPeminjamanPage.php"
                 </script>';
                 
         }else{
             echo
                 '<script>
-                alert("data gagal diubah");
+                alert("Data gagal diubah [!]");
                 </script>';
         }
     }else {

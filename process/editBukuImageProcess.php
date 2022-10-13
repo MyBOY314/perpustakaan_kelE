@@ -46,14 +46,14 @@
             if($query){
                 echo
                     '<script>
-                    alert("berhasil ganti Cover Image");
+                    alert("Cover Image berhasil terganti!!");
                     window.location = "../page/editBukuPage.php?id='.$id.'"
                     </script>';
                 
             }else{
                 echo
                     '<script>
-                    alert("Gagal, silahkan coba lagi");
+                    alert("Gagal, silahkan coba lagi [!]");
                     </script>';
             }
 

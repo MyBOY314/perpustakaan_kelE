@@ -37,7 +37,7 @@
 
         if (mysqli_num_rows($findEmail) != 0) {
             echo '<script>
-            alert("Email tidak tersedia !!!");
+            alert("Email tidak tersedia [!]");
             </script>';
             $availableCheck += 1;
         }
@@ -45,7 +45,7 @@
         if($availableCheck != 0){
             echo
             '<script>
-                alert("Register Failed");
+                alert("Register Failed [!]");
                 window.location = "../page/registerPage.php"
             </script>';
         }else{
@@ -64,14 +64,14 @@
             if($query){
                 echo
                     '<script>
-                    alert("Register Success");
+                    alert("Register Success!!");
                     window.location = "../index.php"
                     </script>';
                 
             }else{
                 echo
                     '<script>
-                    alert("Register Failed");
+                    alert("Register Failed [!]");
                     </script>';
             }
         }

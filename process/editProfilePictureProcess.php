@@ -53,7 +53,7 @@
             if($query){
                 echo
                     '<script>
-                    alert("berhasil ganti Profile Picture");
+                    alert("Profile Picture Berhasil Terganti!");
                     window.location = "../page/showProfilePage.php"
                     </script>';
                 

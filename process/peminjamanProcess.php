@@ -34,7 +34,7 @@ session_start();
         }else{
             echo
                 '<script>
-                alert("Register Failed");
+                alert("Register Failed [!]");
                 </script>';
         }
         

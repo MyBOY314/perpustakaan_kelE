@@ -26,7 +26,7 @@ $email = $data['email'];
     </div>
     <br>
     <div class="d-flex justify-content-center">
-        <a class="btn btn-success" style="width: 30%" href="../page/editProfilePicturePage.php" role="button">CHANGE PROFILE PICTure</a>
+        <a class="btn btn-success" style="width: 30%" href="../page/editProfilePicturePage.php" role="button">CHANGE PROFILE PICTURE</a>
     </div>
     <table class="table ">
         <form action="../process/loginProcess.php" method="post">

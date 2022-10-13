@@ -22,7 +22,7 @@
                     
                 }else {
                     echo '<script>
-                        alert("Hanya SUpport .jpg .jpeg .png !!!");
+                        alert("Hanya Support .jpg .jpeg .png !!!");
                         </script>';
                 }
         }else {
