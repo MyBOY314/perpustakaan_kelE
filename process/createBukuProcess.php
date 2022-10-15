@@ -38,7 +38,7 @@
         $query = mysqli_query($con,
         "INSERT INTO buku(namabuku, jumlahtersedia, gambar)
         VALUES
-        ('$namabuku', '$jumlahtersedia','$new_img_name')")
+        ('$namabuku', '$jumlahtersedia','$new_img_name')") 
         or die(mysqli_error($con));
 
         if($query){
