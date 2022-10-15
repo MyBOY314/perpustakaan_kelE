@@ -65,7 +65,7 @@ session_start();
                     <div class="content-menu" >
                         <i class="fa fa-book"></i>
                         <a href="./dashboardPage.php" style="font-weight:600"
-                        >Buku</a>
+                        >List Buku</a>
                     </div>';
                     if($_SESSION['admin'] == 0){
                         echo'

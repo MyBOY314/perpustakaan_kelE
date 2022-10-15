@@ -1,5 +1,5 @@
 <?php
-include '../component/sidebar.php';
+include '../component/userSidebar.php';
 
 if($_SESSION['admin'] == 0){
     echo '<script>

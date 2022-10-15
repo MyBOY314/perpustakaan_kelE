@@ -1,5 +1,5 @@
 <?php
-include '../component/sidebar.php';
+include '../component/userSidebar.php';
 
 $id_buku = $_GET['id'];
 $query_buku = mysqli_query($con, "SELECT * FROM buku WHERE id=$id_buku") or

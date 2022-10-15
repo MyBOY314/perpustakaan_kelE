@@ -1,5 +1,5 @@
 <?php
-include '../component/sidebar.php';
+include '../component/userSidebar.php';
 
 $id_user = $_SESSION['id'];
 $id_buku = $_GET['id'];

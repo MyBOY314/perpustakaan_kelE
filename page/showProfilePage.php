@@ -1,5 +1,5 @@
 <?php
-include '../component/sidebar.php';
+include '../component/userSidebar.php';
 
 $id = $_SESSION['id'];
 $query = mysqli_query($con, "SELECT * FROM users WHERE id=$id") or
