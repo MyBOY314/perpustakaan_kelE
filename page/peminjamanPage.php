@@ -67,6 +67,9 @@ $jumlahtersedia = $data_buku['jumlahtersedia'];
         
         $_SESSION['tgl_pengembalian_buku'] = $tanggal_pengembalian;
 ?>
+<link href="style.css" rel="stylesheet">
+
+
 <div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 5px
     solid #0f5a7a; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
     0.19);" >
@@ -88,7 +91,8 @@ $jumlahtersedia = $data_buku['jumlahtersedia'];
             Buku yang di Pinjam
             <span class="badge bg-primary rounded-pill"><?php echo $namabuku ?></span>
         </li><li class="list-group-item d-flex justify-content-between align-items-center">
-        <img src="../gambar/<?php echo $gambar;?>" height="50%" width="50%">
+            Cover
+            <img src="../gambar/<?php echo $gambar;?>" width="20%">
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Tanggal Peminjaman
