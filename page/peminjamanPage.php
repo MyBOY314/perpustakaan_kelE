@@ -78,30 +78,27 @@ $jumlahtersedia = $data_buku['jumlahtersedia'];
         <h6><a href="./showProfilePage.php">CANCEL</a></h6>
     </div>
     
-    <ul class="list-group ">
-        <li class="list-group-item d-flex justify-content-between align-items-center" >
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
             Nama Peminjam
             <span class="badge bg-primary rounded-pill"><?php echo $name ?></span>
         </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center" >
+        <li class="list-group-item d-flex justify-content-between align-items-center">
             Email Peminjam
             <span class="badge bg-primary rounded-pill"><?php echo $email ?></span>
         </li>
-    </ul>
-    <ul class="list-group list-group-flush">
         <li class="list-group-item d-flex justify-content-between align-items-center">
-            <img src="../gambar/<?php echo $gambar;?>" class="rounded mx-auto d-block" height="20%" width="20%">
-        </li>
-        <li class="list-group-item d-flex justify-content-center">
+            Buku yang di Pinjam
             <span class="badge bg-primary rounded-pill"><?php echo $namabuku ?></span>
+        </li><li class="list-group-item d-flex justify-content-between align-items-center">
+            Cover
+            <img src="../gambar/<?php echo $gambar;?>" width="20%">
         </li>
-    </ul>
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item d-flex justify-content-between align-items-center" style="width:621px">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
             Tanggal Peminjaman
             <span class="badge bg-primary rounded-pill"><?php echo date('d', strtotime($tanggal)). ' '. $bulan. ' '. date('Y', strtotime($tanggal)); ?></span>
         </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center" style="width:621px">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
             Tanggal Pengembalian Maximal
             <span class="badge bg-primary rounded-pill"><?php echo date('d', strtotime($tanggal_pengembalian)). ' '. $bulan. ' '. date('Y', strtotime($tanggal_pengembalian)); ?></span>
         </li>
