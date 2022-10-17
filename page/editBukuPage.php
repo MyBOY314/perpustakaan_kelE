@@ -41,7 +41,7 @@ $jumlahtersedia = $data['jumlahtersedia'];
     ?>
     
     <table class="table ">
-        <form action="../process/editSeriesProcess.php" method="post">
+        <form action="../process/editBukuProcess.php" method="post">
             <div class="mb-3">
                 <label for="name" class="form-
                 label">Judul Buku</label>

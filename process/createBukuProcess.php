@@ -1,5 +1,5 @@
 <?php
-    
+    session_start(); 
     if(isset($_POST['save'])  && $_SESSION['admin'] == 1){
         include('../db.php');
         $namabuku = $_POST['judulbuku'];
