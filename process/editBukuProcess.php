@@ -1,32 +1,34 @@
-<?php 
-    session_start(); 
-    if(isset($_POST['edit_movie'])){ 
-        include ('../db.php'); 
-        $id = $_SESSION['buku']['id'];
-        $namabuku = $_POST['namabuku']; 
-        $jumlahtersedia = $_POST['jumlahtersedia']; 
-        $gambar = $_POST['gambar']; 
+<?php
+    session_start();
+    
+    if(isset($_POST['save']) && $_SESSION['admin'] == 1){
+        include('../db.php');
+        $namabuku = $_POST['namabuku'];
+        $jumlahtersedia = $_POST['jumlahtersedia'];
+        $id = $_SESSION['idBuku'];
 
-        $queryUpdate = mysqli_query($con, "UPDATE `buku` SET `namabuku`='$namabuku',`jumlahtersedia`='$jumlahtersedia',`gambar`='$gambar'") 
-        or die(mysqli_error($con)); 
+        $query = mysqli_query($con,
+        "UPDATE buku SET namabuku = '$namabuku', jumlahtersedia = '$jumlahtersedia' WHERE id=$id")
+        or die(mysqli_error($con));
         
-            if($queryUpdate){ 
-                echo 
-                '<script> 
-                    alert("Edit Success"); 
-                    window.location = "../page/editBukuPage.php" 
-                </script>'; 
-            }else{ 
-                echo 
-                '<script> 
-                    alert("Edit Failed"); 
-                    window.location = "../page/editBukuPage.php" 
-                    </script>'; 
-            } 
-    }else {
-         echo 
-         '<script> 
-         window.history.back() 
-         </script>';
+            if($query){
+                echo
+                    '<script>
+                    alert("data berhasil diubah");
+                    window.location = "../page/dashboardPage.php"
+                    </script>';
+                
+            }else{
+                echo
+                    '<script>
+                    alert("data gagal diubah");
+                    </script>';
+            }
+    }else{
+        echo
+            '<script>
+            alert("Anda tidak memiliki aksess");
+            window.history.back()
+            </script>';
     }
 ?>

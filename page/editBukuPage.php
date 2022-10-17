@@ -1,9 +1,9 @@
 <?php
-include '../component/adminSidebar.php';
+include '../component/userSidebar.php';
 
 if($_SESSION['admin'] == 0){
     echo '<script>
-          alert("Hanya SUpport .jpg .jpeg .png !!!");
+          alert("Hanya Support .jpg .jpeg .png !!!");
           window.location = "../page/dashboardPage.php"
           </script>';
           
@@ -45,14 +45,14 @@ $jumlahtersedia = $data['jumlahtersedia'];
             <div class="mb-3">
                 <label for="name" class="form-
                 label">Judul Buku</label>
-                <input class="form-control" id="name" name="name"
+                <input class="form-control" id="namabuku" name="namabuku"
                 aria-describedby="emailHelp" value="<?php echo $namabuku; ?>">
             </div>
             <div class="mb-3">
                 <label for="genre" class="form-
                 label">Jumlah Buku</label>
                 <input class="form-control"
-                id="genre" name="genre" value="<?php echo $jumlahtersedia; ?>">
+                id="jumlahtersedia" name="jumlahtersedia" value="<?php echo $jumlahtersedia; ?>">
             </div>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary"

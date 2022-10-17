@@ -100,8 +100,7 @@ include '../component/userSidebar.php'
                             <a href="../page/editBukuPage.php?id='.$data['id'].'" onClick="return
                                 confirm ( \'Are you sure want to delete this data?\')"class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">EDIT</a>
                             
-                            <a href="../process/deleteBukuProcess.php?id='.$data['id'].'" onClick="return
-                                confirm ( \'Are you sure want to delete this data?\')"class="btn btn-danger btn-lg" tabindex="-1" role="button" aria-disabled="false">HAPUS</a>
+                            <a href="../process/deleteBukuProcess.php?id='.$data['id'].'" onClick="return confirm ( \'Are you sure want to delete this data?\')"class="btn btn-danger btn-lg" tabindex="-1" role="button" aria-disabled="false">HAPUS</a>
                             </td>
                             ';
                         }else{
