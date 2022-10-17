@@ -53,7 +53,14 @@ include '../component/userSidebar.php'
         echo date('d', strtotime($tanggal)). ' '. $bulan. ' '. date('Y', strtotime($tanggal));
         ?>
     </div>
-    <a href="./createBukuPage.php" class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">TAMBAH BUKU</a>
+
+            <?php 
+            if($_SESSION['admin'] == 1){
+                echo '
+                <a href="./createBukuPage.php" class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">TAMBAH BUKU</a>';
+            }
+            ?>
+
     <hr>
     <table class="table ">
         <thead>
@@ -95,10 +102,10 @@ include '../component/userSidebar.php'
                         if($_SESSION['admin'] == 1){
                             echo '
                             <a href="../page/listDataPeminjamPage.php?id='.$data['id'].'" onClick="return
-                            confirm ( \'Are you sure want to delete this data?\')"class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="false">Data Peminjam</a></td>
+                            confirm ( \'Are you sure want to open this data?\')"class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="false">Data Peminjam</a></td>
                             <td>
                             <a href="../page/editBukuPage.php?id='.$data['id'].'" onClick="return
-                                confirm ( \'Are you sure want to delete this data?\')"class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">EDIT</a>
+                                confirm ( \'Are you sure want to edit this data?\')"class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">EDIT</a>
                             
                             <a href="../process/deleteBukuProcess.php?id='.$data['id'].'" onClick="return confirm ( \'Are you sure want to delete this data?\')"class="btn btn-danger btn-lg" tabindex="-1" role="button" aria-disabled="false">HAPUS</a>
                             </td>
