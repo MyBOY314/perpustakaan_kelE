@@ -17,7 +17,7 @@ include '../component/userSidebar.php';
                 aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Profile Picture</label>
+                <label for="exampleInputEmail1" class="form-label">Cover Buku</label>
                 <input type="file" name="my_image">
              </div>
             <div class="mb-3">

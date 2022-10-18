@@ -22,8 +22,8 @@ include '../component/userSidebar.php';
              </div>
             
             <div class="mb-3"> 
-                        <label for="exampleInputEmail1" class="form-label">Tanggal Berdiri(YYYY-MM-DD)</label>
-                        <input class="form-control" id="tanggalLahir" name="tanggalBerdiri" aria-describedby="emailHelp"> 
+                        <label for="exampleInputEmail1" class="form-label">Tanggal Berdiri</label>
+                        <input type='date' class="form-control" id="tanggalLahir" name="tanggalBerdiri" aria-describedby="emailHelp"> 
                     </div>
             <div class="mb-3">
                 <label for="keterangan" class="form-

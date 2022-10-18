@@ -21,8 +21,15 @@ include '../component/userSidebar.php'
             }
             ?>
             </tr>
-
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://media.tenor.com/e_CaV5Ue1T0AAAAC/cat-reading.gif" width="30px" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Dr. Seuss</h5>
+                <p class="cardtext">“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”</p>
+            </div>
+        </div>
         </thead>
+
         <tbody>
             <?php
                 $id_user = $_SESSION['id'];

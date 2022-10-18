@@ -16,7 +16,13 @@ include '../component/userSidebar.php'
             <th scope="col">Tanggal Berdiri</th>
             <th scope="col">Keterangan</th>
             </tr>
-
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://media.tenor.com/BWJ3hSsw0wkAAAAC/bean-reading.gif" width="30px" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">J.K. Rowling</h5>
+                <p class="cardtext">“If you don’t like to read, you haven’t found the right book.”</p>
+            </div>
+        </div>
         </thead>
         <tbody>
             <?php

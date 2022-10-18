@@ -3,7 +3,6 @@
     if(isset($_POST['save'])  && $_SESSION['admin'] == 1){
         include('../db.php');
         $namaPublisher = $_POST['namaPublisher'];
-        // $fotoProfil = $_POST['fotoProfil'];
         $tanggalBerdiri = $_POST['tanggalBerdiri'];
         $keterangan= $_POST['keterangan'];
         $availableCheck = 0;
