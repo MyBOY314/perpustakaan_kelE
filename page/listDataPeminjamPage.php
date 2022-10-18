@@ -84,7 +84,7 @@ $jumlahtersedia = $data_buku['jumlahtersedia'];
     <ul>
     <?php
         $query = mysqli_query($con, "SELECT users.name, users.email FROM peminjaman JOIN users 
-        on Peminjaman.id_user=users.id where id_buku=$id_buku") or
+        on Peminjaman.id_user=users.id where id_buku=$id_buku and status=1") or
         die(mysqli_error($con));
 
         if (mysqli_num_rows($query) == 0) {
