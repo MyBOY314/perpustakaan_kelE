@@ -81,7 +81,7 @@ session_start();
                     </div>
                     <div class="content-menu " >
                         <i class="fa fa-sign-out"></i>
-                        <a href="../process/logoutProcess.php" style="font-weight:600">&nbspLogout</a>
+                        <a href="../process/logoutProcess.php" onClick="return confirm ( \'Are you sure want to delete this data?\')" style="font-weight:600">Logout</a>
                     </div>
                 <hr>
             </div>

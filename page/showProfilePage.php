@@ -22,11 +22,11 @@ $email = $data['email'];
     </div>
     <hr>
     <div class="d-flex justify-content-center">
-        <img src="../gambar/<?php echo $data['image'];?>" height="50%" width="50%">
+        <img src="../gambar/<?php echo $data['image'];?>" height="30%" width="30%">
     </div>
     <br>
     <div class="d-flex justify-content-center">
-        <a class="btn btn-success" style="width: 30%" href="../page/editProfilePicturePage.php" role="button">CHANGE PROFILE PICTURE</a>
+        <a class="btn btn-success" style="width: 20%" href="../page/editProfilePicturePage.php" role="button">CHANGE PROFILE PICTURE</a>
     </div>
     <table class="table ">
         <form action="../process/loginProcess.php" method="post">

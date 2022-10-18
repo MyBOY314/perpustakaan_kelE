@@ -101,19 +101,20 @@ include '../component/userSidebar.php'
                         <td>';
                         if($_SESSION['admin'] == 1){
                             echo '
-                            <a href="../page/listDataPeminjamPage.php?id='.$data['id'].'" onClick="return
-                            confirm ( \'Are you sure want to open this data?\')"class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="false">Data Peminjam</a></td>
+                            <a href="../page/listDataPeminjamPage.php?id='.$data['id'].'" 
+                            onClick="return alert ( \'Open this data\')"class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="false">Data Peminjam</a></td>
                             <td>
-                            <a href="../page/editBukuPage.php?id='.$data['id'].'" onClick="return
-                                confirm ( \'Are you sure want to edit this data?\')"class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">EDIT</a>
+                            <a href="../page/editBukuPage.php?id='.$data['id'].'"
+                            onClick="return confirm ( \'Are you sure want to edit this data?\')"class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">EDIT</a>
                             
-                            <a href="../process/deleteBukuProcess.php?id='.$data['id'].'" onClick="return confirm ( \'Are you sure want to delete this data?\')"class="btn btn-danger btn-lg" tabindex="-1" role="button" aria-disabled="false">HAPUS</a>
+                            <a href="../process/deleteBukuProcess.php?id='.$data['id'].'" 
+                            onClick="return confirm ( \'Are you sure want to delete this data?\')"class="btn btn-danger btn-lg" tabindex="-1" role="button" aria-disabled="false">HAPUS</a>
                             </td>
                             ';
                         }else{
                             if($data['jumlahtersedia'] <= 0){
-                                echo '<a href="../page/peminjamanPage.php?id='.$data['id'].'" onClick="return
-                                confirm ( \'Are you sure want to delete this data?\')"class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">PINJAM</a>';
+                                echo '<a href="../page/peminjamanPage.php?id='.$data['id'].'" 
+                                onClick="return confirm ( \'Are you sure want to delete this data?\')"class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">PINJAM</a>';
                             }else{
                                 echo '<a href="../page/peminjamanPage.php?id='.$data['id'].'" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="false">PINJAM</a>';
                             }

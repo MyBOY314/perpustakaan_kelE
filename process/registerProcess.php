@@ -37,7 +37,7 @@
 
         if (mysqli_num_rows($findEmail) != 0) {
             echo '<script>
-            alert("Email tidak tersedia [!]");
+            alert("Email sudah terpakai [!]");
             </script>';
             $availableCheck += 1;
         }
