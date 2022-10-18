@@ -11,22 +11,22 @@ include '../component/userSidebar.php'
     <table class="table ">
         <thead>
             <tr>
-            <th scope="col">Nama Penulis</th>
-            <th scope="col">Profil</th>
-            <th scope="col">Tanggal Lahir</th>
-            <th scope="col">Bio Data</th>
+            <th scope="col">Nama Publisher</th>
+            <th scope="col">Logo</th>
+            <th scope="col">Tanggal Berdiri</th>
+            <th scope="col">Keterangan</th>
             </tr>
 
         </thead>
         <tbody>
             <?php
                 $id_user = $_SESSION['id'];
-                $query = mysqli_query($con, "SELECT id, namaPenulis, fotoProfil, tanggalLahir, bioData FROM penulis") or
+                $query = mysqli_query($con, "SELECT id, namaPublisher, logo, tanggalBerdiri, keterangan FROM publisher") or
                 die(mysqli_error($con));
 
                 if($_SESSION['admin'] == 1){
                     echo '
-                <a href="./createPenulisPage.php" class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">TAMBAH PENULIS</a>';
+                <a href="./createPublisherPage.php" class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">TAMBAH PUBLISHER</a>';
                 }
 
 
@@ -38,30 +38,29 @@ include '../component/userSidebar.php'
 
                     echo'
                         <tr>
-                        <td>'.$data['namaPenulis'].'</td>
-                        <td>';?><img src="../gambar/<?php echo $data['fotoProfil'];?>" height="100" width="100"><?php
+                        <td>'.$data['namaPublisher'].'</td>
+                        <td>';?><img src="../gambar/<?php echo $data['logo'];?>" height="100" width="100"><?php
                         echo '</td>
 
-                        <td>'.$data['tanggalLahir'].'</td>';
+                        <td>'.$data['tanggalBerdiri'].'</td>';
                         
-                            echo '<td>'.$data['bioData'].'</td>';
+                            echo '<td>'.$data['keterangan'].'</td>';
                         '</td>
                         </tr>';
 
                         if($_SESSION['admin'] == 1){
                             echo '
                             <td>
-                            <a href="../page/editPenulisPage.php?id='.$data['id'].'" onClick="return
+                            <a href="../page/editPublisherPage.php?id='.$data['id'].'" onClick="return
                                 confirm ( \'Are you sure want to edit this data?\')"class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">EDIT</a>
                             
-                            <a href="../process/deletePenulisProcess.php?id='.$data['id'].'" onClick="return confirm ( \'Are you sure want to delete this data?\')"class="btn btn-danger btn-lg" tabindex="-1" role="button" aria-disabled="false">HAPUS</a>
+                            <a href="../process/deletePublisherProcess.php?id='.$data['id'].'" onClick="return confirm ( \'Are you sure want to delete this data?\')"class="btn btn-danger btn-lg" tabindex="-1" role="button" aria-disabled="false">HAPUS</a>
                             </td>
                             ';
                         }
 
                     $no++;
                 }
-
             }
             ?>
         </tbody>

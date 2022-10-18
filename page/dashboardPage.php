@@ -79,6 +79,13 @@ include '../component/userSidebar.php'
             ?>
             
             </tr>
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://media.tenor.com/zFYlcnyDzhkAAAAd/student-studying.gif" width="30px" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">George R.R. Martin</h5>
+                <p class="cardtext">A reader lives a thousand lives before he dies . . . The man who never reads lives only one.</p>
+            </div>
+        </div>
 
         </thead>
         <tbody>
