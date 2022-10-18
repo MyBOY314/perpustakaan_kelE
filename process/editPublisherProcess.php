@@ -3,21 +3,21 @@
     
     if(isset($_POST['save']) && $_SESSION['admin'] == 1){
         include('../db.php');
-        $namaPenulis = $_POST['namaPenulis'];
-        $tanggalLahir = $_POST['tanggalLahir'];
-        $bioData= $_POST['bioData'];
-        $id = $_SESSION['idPenulis'];
+        $namaPublisher = $_POST['namaPublisher'];
+        $tanggalBerdiri = $_POST['tanggalBerdiri'];
+        $keterangan = $_POST['keterangan'];
+        $id = $_SESSION['idPublisher'];
 
         $query = mysqli_query($con,
-        "UPDATE penulis SET namaPenulis = '$namaPenulis', tanggalLahir = '$tanggalLahir',
-        bioData = '$bioData' WHERE id=$id")
+        "UPDATE publisher SET namaPublisher = '$namaPublisher', tanggalBerdiri = '$tanggalBerdiri',
+        keterangan = '$keterangan' WHERE id=$id")
         or die(mysqli_error($con));
         
             if($query){
                 echo
                     '<script>
                     alert("Data berhasil diubah");
-                    window.location = "../page/listPenulisPage.php"
+                    window.location = "../page/listPublisherPage.php"
                     </script>';
                 
             }else{

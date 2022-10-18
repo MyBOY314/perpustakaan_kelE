@@ -22,8 +22,8 @@ include '../component/userSidebar.php';
              </div>
             
             <div class="mb-3"> 
-                        <label for="exampleInputEmail1" class="form-label">Tanggal Lahir(YYYY-MM-DD)</label>
-                        <input class="form-control" id="tanggalLahir" name="tanggalLahir" aria-describedby="emailHelp"> 
+                        <label for="exampleInputEmail1" class="form-label">Tanggal Lahir</label>
+                        <input type='date' class="form-control" id="tanggalLahir" name="tanggalLahir" aria-describedby="emailHelp"> 
                     </div>
             <div class="mb-3">
                 <label for="bioData" class="form-

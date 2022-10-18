@@ -15,6 +15,11 @@ include '../component/userSidebar.php'
             <th scope="col">Profil</th>
             <th scope="col">Tanggal Lahir</th>
             <th scope="col">Bio Data</th>
+            <?php
+            if($_SESSION['admin'] == 1){
+                echo '<th scope="col">Aksi</th>';
+            }
+            ?>
             </tr>
 
         </thead>
@@ -58,10 +63,10 @@ include '../component/userSidebar.php'
                             </td>
                             ';
                         }
-
                     $no++;
                 }
 
+                
             }
             ?>
         </tbody>

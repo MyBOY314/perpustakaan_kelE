@@ -5,7 +5,7 @@ include '../component/userSidebar.php'
     solid #0f5a7a; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
     0.19);" >
     <div class="body d-flex justify-content-between">
-        <h4>LIST PENULIS</h4>
+        <h4>LIST PUBLISHER</h4>
     </div>
     <hr>
     <table class="table ">
