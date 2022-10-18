@@ -21,10 +21,13 @@ include '../component/userSidebar.php'
         <tbody>
             <?php
                 $id_user = $_SESSION['id'];
-                $query = mysqli_query($con, "SELECT id, namaPenulis, fotoProfil, tanggalLahir, bioData FROM penulis ") or
+                $query = mysqli_query($con, "SELECT id, namaPenulis, fotoProfil, tanggalLahir, bioData FROM penulis") or
                 die(mysqli_error($con));
 
-                
+                if($_SESSION['admin'] == 1){
+                    echo '
+                <a href="./createPenulisPage.php" class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">TAMBAH PENULIS</a>';
+                }
 
 
                 if (mysqli_num_rows($query) == 0) {
@@ -32,20 +35,30 @@ include '../component/userSidebar.php'
                 }else{
                     $no = 1;
                 while($data = mysqli_fetch_assoc($query)){
+
                     echo'
                         <tr>
                         <td>'.$data['namaPenulis'].'</td>
                         <td>';?><img src="../gambar/<?php echo $data['fotoProfil'];?>" height="100" width="100"><?php
                         echo '</td>
 
-                        <td>'.$data['tanggalLahir'].'</td>
-                        <td>';
+                        <td>'.$data['tanggalLahir'].'</td>';
                         
-                            echo '<td>'.$data['bioData'].'</td>
-                            <td>';
+                            echo '<td>'.$data['bioData'].'</td>';
                         '</td>
                         </tr>';
                     $no++;
+                }
+
+                if($_SESSION['admin'] == 1){
+                    echo '
+                    <td>
+                    <a href="../page/editPenulisPage.php?id='.$data['id'].'" onClick="return
+                        confirm ( \'Are you sure want to edit this data?\')"class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">EDIT</a>
+                    
+                    <a href="../process/deletePenulisProcess.php?id='.$data['id'].'" onClick="return confirm ( \'Are you sure want to delete this data?\')"class="btn btn-danger btn-lg" tabindex="-1" role="button" aria-disabled="false">HAPUS</a>
+                    </td>
+                    ';
                 }
             }
             ?>

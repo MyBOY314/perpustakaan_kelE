@@ -1,16 +1,49 @@
 <?php
 include '../component/userSidebar.php';
+
+if($_SESSION['admin'] == 0){
+    echo '<script>
+          alert("Hanya Support .jpg .jpeg .png !!!");
+          window.location = "../page/dashboardPage.php"
+          </script>';
+          
+}
+
+$id = $_GET['id'];
+$_SESSION['idPenulis'] = $id;
+$query = mysqli_query($con, "SELECT * FROM penulis WHERE id=$id") or
+die(mysqli_error($con));
+$data = mysqli_fetch_array($query);
+
+        $namaPenulis = $_POST['namaPenulis'];
+        $fotoProfil = $_POST['fotoProfil'];
+        $tanggalLahir = $_POST['tanggalLahir'];
+        $bioData= $_POST['bioData'];
 ?>
 <div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 5px
     solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
     0.19);" >
     <div class="body d-flex justify-content-between">
-        <h4>TAMBAH PENULIS</h4>
+        <h4>EDIT Penulis</h4>
     </div>
+    
     <hr>
+    <div class="d-flex justify-content-center">
+        <img src="../gambar/<?php echo $data['fotoProfil'];?>" height="50%" width="50%">
+    </div>
+    <br>
+    <?php 
+    echo'
+        <div class="d-flex justify-content-center">
+            <a href="../page/editBukuImagePage.php?id='.$data['id'].'" onClick="return
+            confirm ( \'Are you sure want to delete this data?\')"class="btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="false">EDIT</a>
+        </div>
+        '
+    ?>
+    
     <table class="table ">
-        <form action="../process/createPenulisProcess.php" method="post" enctype="multipart/form-data">
-            <div class="mb-3">
+        <form action="../process/editBukuProcess.php" method="post">
+        <div class="mb-3">
                 <label for="namaPenulis" class="form-
                 label">Nama Penulis</label>
                 <input class="form-control" id="namaPenulis" name="namaPenulis"
@@ -34,6 +67,10 @@ include '../component/userSidebar.php';
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary"
                 name="save">SAVE</button>
+                
+            </div>
+            <div class="d-grid gap-2">
+                <a href="./dashboardPage.php" id="cancel" name="cancel" class="btn btn-default">Cancel</a>
             </div>
         </form>
     </table>

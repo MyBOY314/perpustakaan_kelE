@@ -73,13 +73,14 @@ session_start();
                         <i class="fa fa-list"></i>
                         <a href="./listPeminjamanPage.php" style="font-weight:600">List Peminjaman</a>
                         </div>';
-
-                        echo'
-                        <div class="content-menu " >
-                        <i class="fa fa-list"></i>
-                        <a href="./listPenulisPage.php" style="font-weight:600">List Penulis</a>
-                        </div>';
                     }
+                    
+                    echo'
+                    <div class="content-menu " >
+                    <i class="fa fa-list"></i>
+                    <a href="./listPenulisPage.php" style="font-weight:600">List Penulis</a>
+                    </div>';
+                    
                     echo '
                     <div class="content-menu " >
                         <i class="fa fa-user"></i>
